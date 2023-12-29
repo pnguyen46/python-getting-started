@@ -1,3 +1,4 @@
+#use for when something change automatically
 names = ['Christopher', 'Susan']
 index = 0
 while index < len(names):
