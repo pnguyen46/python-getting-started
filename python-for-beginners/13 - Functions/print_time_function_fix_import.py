@@ -3,6 +3,10 @@ from datetime import datetime
 
 # Create a function called print_time
 # This function will print the message and current time
+# Pros:
+#  - make code more readable and easier to maintain
+#  - reduce rework and limit the chance of bugs
+#  - code encapsulation
 def print_time():
     print('task completed')
     print(datetime.now())
