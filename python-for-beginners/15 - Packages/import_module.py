@@ -3,6 +3,7 @@ import helpers
 helpers.display('Not a warning')
 
 # import all into current namespace
+# imported data will become globally available
 from helpers import *
 display('Not a warning')
 
