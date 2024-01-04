@@ -1,0 +1,27 @@
+- Web service (Documentation is key)
+    - When a developer wants to share the functionality of a function but not the actual code in the program, they can place the function on a web server.
+        -   A programmer with the address of that function on the web server and the required permissions can call the function
+    -API
+        - You can't call a function unless you know the function name and the required parameters
+        - When you create a web service you create an Application Programming Interface (API)
+        - The API defines the function names and parameters so others know how to call your function
+            - analyze(visualfeatures,detail,language)
+    -Keys allow for the tracking of users who have permission to use the web service
+        - A developer sign up on the web site, or buys a license for the software and is provided a unique key.
+        - When the developer calls the web service they provide their unique key. Once the key is verify, they are granted access to call function on the web server.
+    - There is a standard for sending messages across the web
+        - Hypertext Transfer Protocol (HTTP) is a standard protocol for sending messages across the web
+            - GET (get item from web service)
+                - Pass values in query string only
+                    - Special characters must be "escaped"
+                    - Limited amount of data
+            - POST (post item to web service)
+                - Pass values in query string AND body
+                    - No need to escape special characters if passed in body
+                    - Can pass large amounts of data, including images, in body
+    - The request library simplifies HTTP (GET || POST) calls from Python code
+        - Ex: (call_api.py)
+            - request.post(address (contoso/analyze)
+                            ,http_headers (content-type,API key)
+                            ,function_parameters (visualfeatures,details,language)
+                            ,message_body (image file))
